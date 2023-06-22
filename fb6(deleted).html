@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <style>
+      .dropbtn {
+        background-color: transparent;
+        /* color: white; */
+        /* padding: 10px; */
+        /* font-size: 20px; */
+        /* margin: 0px 5px; */
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+        z-index: 1;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.201);
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #f1f1f1;
+      }
+
+      .navbar-nav .nav-link {
+        color: black;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1% 10%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      }
+      .dropdown {
+        padding: 10px;
+      }
+
+      .nav-item {
+        padding: 10px;
+      }
+
+      main {
+        padding-top: 8%;
+        text-align: justify;
+      }
+
+      /* main h1 {
+        padding-top: 2%;
+      }
+      main p {
+        padding: 0px 5%;
+      } */
+
+      @media (max-width: 980px) {
+        main h1 {
+          padding-top: 10%;
+          transition: 0.4s;
+        }
+      }
+
+      @media (max-width: 430px) {
+        main h1 {
+          padding-top: 10%;
+          transition: 0.4s;
+        }
+      }
+
+
+      * {
+    box-sizing: border-box;
+    padding: 0 1%;
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    text-align: justify;
+
+    
+  }
+
+  #content{
+    height: auto;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      height: auto;
+      transition: .4s;
+    }
+  }
+
+
+      footer a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid" style="padding: 1px 0px">
+        <a class="navbar-brand" href="index.html">
+          <img
+            style="width: 220px; height: 100%"
+            src="Revords_logo.png"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="dropdown">
+          <button class="dropbtn dropdown-toggle">For&nbspBusinesses</button>
+          <div class="dropdown-content">
+            <a href="fb1.html">Our Program</a>
+            <a href="fb2.html">Why Loyalty</a>
+            <a href="fb3.html">How It Works</a>
+            <a href="fb4.html">Pricing</a>
+            <a href="fb5.html">For Enterprise</a>
+            <a href="fb6.html" style="border: none">Marketing Tips</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn dropdown-toggle">Our&nbsp;Products</button>
+          <div class="dropdown-content">
+            <a href="Op1.html">Customer&nbsp;Aquisition</a>
+            <a href="Op2.html">Loyalty&nbsp;and&nbsp;Retension</a>
+            <a href="Op3.html">Marketing&nbsp;Automation</a>
+            <a href="Op4.html" style="border: none">Promotions</a>
+          </div>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="about.html"
+              >About&nbsp;Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link bg-secondary rounded rounded-3 text-white"
+              href="#"
+              >Sign&nbsp;In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <h1>About Us</h1>
+
+      <div class="row">
+        <div class="column" id="content" style="background-color:white;">
+          <h1>The visionary minds behind our company</h1>
+          <p>Victor and Matt embarked on their professional journey as esteemed consultants at McKinsey, where they gained firsthand experience of the impact customer loyalty programs can have. Recognizing the significant investments made by large corporations in building such programs, they envisioned a future where the power of Fortune 500 loyalty initiatives could be accessible to local businesses. From humble beginnings as two individuals in a garage, Revords has grown to serve countless businesses nationwide. In October 2021, Revords achieved a major milestone by joining forces with SumUp, a renowned global payments leader.</p>
+        </div>
+        <div class="column" style="background-color:#bbbbbb65;">
+          <h2>Image</h2>
+          <p>Image related to the content</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="column" style="background-color:#bbbbbb65;">
+          <h2>Image</h2>
+          <p>Image related to the content</p>
+        </div>
+        <div class="column" id="content" style="background-color:white;">
+          <h1>Our Guiding Principles</h1>
+          <p>Our guiding principles serve as a constant reminder that our approach to work is equally significant to the tasks we undertake.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="column" id="content" style="background-color:white;">
+          <h2>Collective Modesty</h2>
+          <p>Each one of us brings our distinct talents to the table, recognizing the importance of collaboration and depending on others for our achievements. Embracing shared humility, we foster a culture where success is celebrated collectively, and failures become valuable learning experiences for the entire team.</p>
+        </div>
+        <div class="column" style="background-color:white">
+          <h2>Indomitable Determination.</h2>
+          <p>Once they developed the initial product, Vic and Matt tirelessly hit the streets, working around the clock to secure the company's first 100 sales. At times, we must dig deep, embodying a warrior spirit, and outperform the competition to elevate the company to new heights.</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column" id="content" style="background-color:white;">
+          <h2>Genuine Connections</h2>
+          <p>At our workplace, we embrace authenticity by being true to ourselves. This entails not only showcasing our strengths but also being open about our vulnerabilities. By fostering genuine and transparent connections, we cultivate a foundation of trust and encouragement that empowers us to take bold risks.</p>
+        </div>
+        <div class="column" style="background-color:white">
+          <h2>Daily Delight.</h2>
+          <p>By embodying our values on a daily basis, we discover a profound sense of joy each day. When Victor speaks of joy, he refers to a nuanced understanding: it arises from a profound sense of purpose and satisfaction, and it can be experienced amidst challenges as well as achievements.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div style="background-color:white; text-align: center;">
+        <div id="content" >
+          <h1>Empowering local businesses</h1>
+          <p style="max-width: 600px; margin: 0 auto;">More than 70 million individuals rely on Revords to shop at and uplift the local businesses that contribute to the greatness of their communities.</p>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Footer Section -->
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #21303b">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: Links -->
+        <section class="mt-5">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Products</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Awards</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Help</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Contact</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                aliquam sequi voluptate quas.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a> -->
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white text-decoration-none" href="#">Revords</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- End of .container -->
+
+    <!-- Footer Section -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

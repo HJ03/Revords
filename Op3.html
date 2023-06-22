@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+    <script src="bower_components/aos/dist/aos.js"></script>
+
+    <style>
+      .dropbtn {
+        background-color: transparent;
+        /* color: white; */
+        /* padding: 10px; */
+        /* font-size: 20px; */
+        /* margin: 0px 5px; */
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+        z-index: 1;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.201);
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #f1f1f1;
+      }
+
+      .navbar-nav .nav-link {
+        color: black;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1% 10%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        background-color: white;
+        z-index: 1000;
+      }
+
+      .dropdown {
+        padding: 10px;
+      }
+
+      .nav-item {
+        padding: 10px;
+      }
+
+    
+      .hero{
+        padding-top: 8%;
+        margin: 0% 15%;
+      }
+      .hero h1,h2,h3,h4,h5,h6{
+        color: #21303B;
+        font-family: Lucida Fax;
+      }
+
+      /* main h1 {
+        padding-top: 2%;
+      }
+      main p {
+        padding: 0px 5%;
+      } */
+
+      @media (max-width: 980px) {
+        main h1 {
+          padding-top: 10%;
+          transition: 0.4s;
+        }
+      }
+
+      @media (max-width: 430px) {
+        main h1 {
+          padding-top: 10%;
+          transition: 0.4s;
+        }
+      }
+
+
+  * {
+    box-sizing: border-box;
+    /* padding: 0 1%; */
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    text-align: justify;
+    font-family: Corbel;
+    font-size:larger;
+
+    
+  }
+
+  #content{
+    height: auto;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      height: auto;
+      transition: .4s;
+    }
+  }
+
+
+
+      footer a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+      AOS.init();
+    </script>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="zoom-in" data-aos-duration="1500">
+      <div class="container-fluid" style="padding: 1px 0px">
+        <a class="navbar-brand" href="index.html">
+          <img
+            style="width: 220px; height: 100%"
+            src="Revords_logo.png"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="dropdown">
+          <button class="dropbtn dropdown-toggle">For&nbspBusinesses</button>
+          <div class="dropdown-content">
+            <a href="fb1.html">Our Program</a>
+            <a href="fb2.html">Why Loyalty</a>
+            <a href="fb3.html">How It Works</a>
+            <a href="fb4.html">Pricing</a>
+            <a href="fb5.html">For Enterprise</a>
+            <a href="fb6.html" style="border: none">Marketing Tips</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn dropdown-toggle">Our&nbsp;Products</button>
+          <div class="dropdown-content">
+            <a href="Op1.html">Customer&nbsp;Aquisition</a>
+            <a href="Op2.html">Loyalty&nbsp;and&nbsp;Retension</a>
+            <a href="Op3.html">Marketing&nbsp;Automation</a>
+            <a href="Op4.html" style="border: none">Promotions</a>
+          </div>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="about.html"
+              >About&nbsp;Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link bg-secondary rounded rounded-3 text-white"
+              href="#"
+              >Sign&nbsp;In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+
+    <main>
+      <h1>Marketing Automation</h1>
+
+      <div style="background-color:white; text-align: center;" data-aos="fade-up" data-aos-duration="1500">
+        <div id="content" >
+          <h1>Introducing AutoPilot</h1>
+          <p style="max-width: 600px; margin: 0 auto;">AutoPilot, the core tool of the Fivestars program, takes center stage by automatically delivering targeted offers to your customers. Designed specifically with the needs of local businesses and their busy owners in mind, AutoPilot provides perfectly-timed prompts that entice customers to return and increase their spending.</p>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div style="background-color:white; text-align: center;" data-aos="fade-up" data-aos-duration="1500">
+        <div id="content" >
+          <h1>Deliver the ideal message precisely when it matters the most.</h1>
+          <p style="max-width: 600px; margin: 0 auto;">AutoPilot operates on a set of triggers that are tied to significant milestones in a customer's journey, such as their initial visit, birthday, or potential risk of not returning. The best part is that once AutoPilot is activated, it runs fully on autopilot, meticulously monitoring your customers and their rewards, eliminating the need for manual tracking on your part.</p>
+        </div>
+
+      </div>
+
+
+      <div class="row">
+        <div class="column" data-aos="fade-right" data-aos-duration="1500" id="content">
+          <h3>Sign-up</h3>
+          <p>
+            Offering a reward upon sign-up provides customers with a compelling incentive, making their initial experience with your business even more enticing. It's an excellent way to extend a warm welcome and establish a positive connection from the very beginning.
+          </p>
+        </div>
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-left" data-aos-duration="1500">
+          <h3>First Visit</h3>
+          <p>Research shows that more than 60% of new customers fail to return after their initial visit. However, by providing an additional reward, you can substantially reduce this percentage and increase customer retention.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column" data-aos="fade-right" data-aos-duration="1500" id="content">
+          <h3>At-Risk</h3>
+          <p>
+            Studies indicate that a customer's probability of returning diminishes by 50-75% every 30 days. At Fivestars, we assist you in proactively engaging with at-risk customers, ensuring that you connect with them before it's too late.
+          </p>
+        </div>
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-left" data-aos-duration="1500">
+          <h3>Lost</h3>
+          <p>Recover customers who have been inactive for a period ranging from five months to a year.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column" data-aos="fade-right" data-aos-duration="1500" id="content">
+          <h3>Growth</h3>
+          <p>
+            Approximately 80% of your revenue is generated by repeat customers. By sending them targeted promotions, you can boost their visit rates by 25% or even higher. Moreover, when these customers do visit, they tend to spend more, resulting in increased revenue for your business.
+          </p>
+        </div>
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-left" data-aos-duration="1500">
+          <h3>Network</h3>
+          <p>Reconnect with customers who initially discovered your business through the Fivestars network by employing tailored messaging that entices them to return to your store. By delivering targeted communication, you can effectively bring these customers back and reinforce their engagement with your business.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column" data-aos="fade-right" data-aos-duration="1500" id="content">
+          <h3>Lapsed</h3>
+          <p>
+            Utilizing the lapsed campaign can significantly enhance the chances of a customer returning to your business, with the potential to increase their likelihood by up to four times. This targeted campaign focuses on re-engaging customers who have lapsed, resulting in higher customer retention rates and increased business growth.
+          </p>
+        </div>
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-left" data-aos-duration="1500">
+          <h3>Birthday</h3>
+          <p>Offer your customers an extra reason to celebrate by choosing your business as the destination for their celebration.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div style="background-color:white; text-align: center;" data-aos="fade-down" data-aos-duration="1500">
+        <div id="content" >
+          <h1>Discover additional methods to reward your valued customers.</h1>
+          <p style="max-width: 600px; margin: 0 auto;">No matter if you're organizing a seasonal event or facing a slow day, our Promotions tool has got you covered. It offers a simple and effective way to send out exclusive rewards and incentives tailored for special occasions or whenever you need a little extra push to attract customers.</p>
+        </div>
+
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <a href="#">Say goodbye to slow days</a>
+        </div>
+
+      </div>
+
+
+    </div>
+
+    </main>
+
+    <!-- Footer Section -->
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #21303b">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: Links -->
+        <section class="mt-5">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Products</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Awards</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Help</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Contact</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                aliquam sequi voluptate quas.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a> -->
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white text-decoration-none" href="#">Revords</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- End of .container -->
+
+    <!-- Footer Section -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

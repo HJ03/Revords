@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
+    <script src="bower_components/aos/dist/aos.js"></script>
+
+    <style>
+      .dropbtn {
+        background-color: transparent;
+        /* color: white; */
+        /* padding: 10px; */
+        /* font-size: 20px; */
+        /* margin: 0px 5px; */
+        border: none;
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 160px;
+        /* box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); */
+        z-index: 1;
+        border-radius: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.201);
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .dropdown:hover .dropbtn {
+        background-color: #f1f1f1;
+      }
+
+      .navbar-nav .nav-link {
+        color: black;
+      }
+      .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 1% 10%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+          rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        background-color: white;
+        z-index: 1000;
+      }
+
+      .dropdown {
+        padding: 10px;
+      }
+
+      .nav-item {
+        padding: 10px;
+      }
+
+    
+      .hero{
+        padding-top: 8%;
+        margin: 0% 15%;
+      }
+      .hero h1,h2,h3,h4,h5,h6{
+        color: #21303B;
+        font-family: Lucida Fax;
+      }
+
+      /* main h1 {
+        padding-top: 2%;
+      }
+      main p {
+        padding: 0px 5%;
+      } */
+
+      @media (max-width: 980px) {
+        main h1 {
+          padding-top: 10%;
+          transition: 0.4s;
+        }
+      }
+
+      @media (max-width: 430px) {
+        main h1 {
+          padding-top: 10%;
+          transition: 0.4s;
+        }
+      }
+
+
+  * {
+    box-sizing: border-box;
+    /* padding: 0 1%; */
+  }
+
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    text-align: justify;
+    font-family: Corbel;
+    font-size:larger;
+
+    
+  }
+
+  #content{
+    height: auto;
+  }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      height: auto;
+      transition: .4s;
+    }
+  }
+
+
+
+      footer a {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+
+    <script>
+      AOS.init();
+    </script>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="zoom-in" data-aos-duration="1500">
+      <div class="container-fluid" style="padding: 1px 0px">
+        <a class="navbar-brand" href="index.html">
+          <img
+            style="width: 220px; height: 100%"
+            src="Revords_logo.png"
+            alt=""
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <div class="dropdown">
+          <button class="dropbtn dropdown-toggle">For&nbspBusinesses</button>
+          <div class="dropdown-content">
+            <a href="fb1.html">Our Program</a>
+            <a href="fb2.html">Why Loyalty</a>
+            <a href="fb3.html">How It Works</a>
+            <a href="fb4.html">Pricing</a>
+            <a href="fb5.html">For Enterprise</a>
+            <a href="fb6.html" style="border: none">Marketing Tips</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn dropdown-toggle">Our&nbsp;Products</button>
+          <div class="dropdown-content">
+            <a href="Op1.html">Customer&nbsp;Aquisition</a>
+            <a href="Op2.html">Loyalty&nbsp;and&nbsp;Retension</a>
+            <a href="Op3.html">Marketing&nbsp;Automation</a>
+            <a href="Op4.html" style="border: none">Promotions</a>
+          </div>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="about.html"
+              >About&nbsp;Us</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link bg-secondary rounded rounded-3 text-white"
+              href="#"
+              >Sign&nbsp;In</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    
+
+    <main>
+
+    <div class="hero">
+      <h1>For Enterprise</h1>
+
+
+      <div class="row">
+        <h1 style="text-align: center;">Simplified marketing at your fingertips</h1>
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-right" data-aos-duration="1500">
+          <!-- <h1>Establish automated systems for rewards and promotions</h1> -->
+          <p>Fivestars is the premier rewards and all-in-one marketing platform catering to local businesses and independent franchises in the US and Canada. Our platform offers seamless customer sign-ups and automated strategies to ensure their continuous engagement through targeted mobile messages. You can customize your loyalty program and gain comprehensive visibility into the results it generates.</p>
+        
+          <br><br>
+          <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <a href="#">Discover the impact Fivestars has made on our enterprise customers.</a>
+          </div>
+        </div>
+        <div class="column"  data-aos="fade-left" data-aos-duration="1500">
+          <img src="" alt="Image">
+        </div>
+      </div>
+
+      <hr>
+
+
+      <div class="row">
+        <div class="column"  data-aos="fade-right" data-aos-duration="1500">
+          <img src="" alt="Image">
+        </div>
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-left" data-aos-duration="1500">
+          <h1>Establish connections with your customers across all platforms.</h1>
+          <p>We ensure that we reach your customers wherever they are, delivering a consistent and seamless customer experience while building an extensive customer database.
+            <br><br>
+            "We were in search of a user-friendly solution that could handle both loyalty and SMS marketing. It was essential for the technology to support not only Winmark as the franchisor but also our franchisees who rely on the tool to engage customers, promoting the sale of their high-quality used items and attracting shoppers with great value prices. Fivestars stood out as the perfect choice."
+          </p>
+        
+          <br><br>
+          <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <a href="#">Sarah Broadwater, Director of Marketing, Winmark Corporation</a>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="row">
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-right" data-aos-duration="1500">
+          <h1>Consolidate all transactional and customer identity data into a unified system</h1>
+          <p>By centralizing data from various customer touch-points and interactions with your brand, we provide unparalleled customer insights and a comprehensive "single customer view."
+            <br><br>
+            "During the development process, we realized the impossibility of creating an in-house loyalty program without partnering with an experienced company like Fivestars, who truly understands the industry and operates round the clock. Fivestars' Autopilot setup has proven to be far more effective in driving customer return to our stores than any internal solution we could have developed."
+          </p>
+        
+          <br><br>
+          <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <a href="#">Anchal Lamba, President, Gong cha (New York Region)</a>
+          </div>
+        </div>
+        <div class="column"  data-aos="fade-left" data-aos-duration="1500">
+          <img src="" alt="Image">
+        </div>
+      </div>
+
+      <hr>
+
+
+      <div class="row">
+        <div class="column"  data-aos="fade-right" data-aos-duration="1500">
+          <img src="" alt="Image">
+        </div>
+        <div class="column" id="content" style="background-color:white;" data-aos="fade-left" data-aos-duration="1500">
+          <h1>Automate personalized interactions to drive customer engagement.</h1>
+          <p>Empower highly personalized, one-on-one connections with your customers through our comprehensive omni-channel messaging platform. Strengthen your customer relationships and achieve significant return on investment.
+            <br>
+            "The greatest advantage of Fivestars for me is undoubtedly the AutoPilot program and the ability to connect with customers through SMS. It's truly remarkable. Considering how everyone is constantly on their phones, we can effortlessly reach out to them about our promotions and new store updates."
+          </p>
+        
+          <br><br>
+          <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <a href="#">Anchal Lamba, President, Gong cha (New York Region)</a>
+          </div>
+          <br><br>
+          <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <a href="#">Call to see a demo</a>
+          </div>
+
+          
+        </div>
+      </div>
+
+      
+      <br><br>
+      <hr><br><br>
+
+      <div style="background-color:white; text-align: center;">
+        <div id="content" >
+          <h1>Driving rapid growth for top-tier brands</h1>
+          <p style="max-width: 600px; margin: 0 auto;"></p>
+        </div>
+      </div>
+
+    </div>
+
+    </main>
+
+    <!-- Footer Section -->
+
+    <!-- Remove the container if you want to extend the Footer to full width. -->
+
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #21303b">
+      <!-- Grid container -->
+      <div class="container">
+        <!-- Section: Links -->
+        <section class="mt-5">
+          <!-- Grid row-->
+          <div class="row text-center d-flex justify-content-center pt-5">
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">About us</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Products</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Awards</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Help</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="#!" class="text-white">Contact</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row-->
+        </section>
+        <!-- Section: Links -->
+
+        <hr class="my-5" />
+
+        <!-- Section: Text -->
+        <section class="mb-5">
+          <div class="row d-flex justify-content-center">
+            <div class="col-lg-8">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+                distinctio earum repellat quaerat voluptatibus placeat nam,
+                commodi optio pariatur est quia magnam eum harum corrupti dicta,
+                aliquam sequi voluptate quas.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Section: Text -->
+
+        <!-- Section: Social -->
+        <section class="text-center mb-5">
+          <a href="" class="text-white me-4">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="text-white me-4">
+            <i class="fab fa-twitter"></i>
+          </a>
+
+          <a href="" class="text-white me-4">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <!-- <a href="" class="text-white me-4">
+            <i class="fab fa-linkedin"></i>
+          </a> -->
+        </section>
+        <!-- Section: Social -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+        © 2023 Copyright:
+        <a class="text-white text-decoration-none" href="#">Revords</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+    <!-- End of .container -->
+
+    <!-- Footer Section -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
